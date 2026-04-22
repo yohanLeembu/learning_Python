@@ -16,3 +16,5 @@ pikachu.attack()#calling a method
 charizard.pokedex_check()
 
 print(pikachu.species)
+
+print(pokemon.no_pokemon)
