@@ -60,7 +60,70 @@ for letter in name:
 #escape characters
 
 print("Yohan\nlimbu") #after \n it prints from the next line
-print("Name:\tYohan\nAge:\t20")
-print("Yohan\\pottery.com")
-print("wow!! he said \"I Love You\"")
-print('And She replied \'I love you too!\'')
+print("Name:\tYohan\nAge:\t20")#creates a tab space
+print("Yohan\\pottery.com")#lets you write \
+print("wow!! he said \"I Love You\"")#lets you write "" inside of ""
+print('And She replied \'I love you too!\'')#lets you write '' inside of  ''
+
+#multi line string, and is also used to explain the fuction for documentation
+text = """Hello
+This is line 2
+This is line 3"""
+
+print(text)#for multiline
+
+def greet():#for explaining function
+    """This function prints a greeting"""
+    print("Hello")
+
+
+#tuple and unpacking them (Unpacking = taking values out of a container into variables)
+point = (10, 20, 30, 50, 70, 19)
+person = ("Alice", 25, "Engineer")
+
+name, age, job = person
+
+print(name)
+
+#Partial unpacking (* operator)
+a, *middle, b = point
+print(*middle)#prints whats in the middle of the first and the last
+a, *rest = point#everything after the first
+
+
+hui = {
+    "name": "Yohan",
+    "age": 13
+}
+
+#printing only the values
+for i in hui.values():
+    print(i)
+
+#printing only the keys
+for i in hui:
+    print(i)
+
+#printing both
+for keys, values in hui.items():
+    print(keys,":",values)
+
+
+#Sets
+nums = {1, 2, 3, 4, 5}#they are unordered, no indexing
+
+change = sorted(nums)#converted to list to use index
+
+
+#nested structure
+
+data = {
+    "users": [
+        {"name": "Alice", "scores": (95, 88, 72)},
+        {"name": "Bob",   "scores": (60, 75, 90)},
+    ]
+}
+
+print(data["users"][1]["scores"][0])
+
+
