@@ -1,4 +1,4 @@
-from base import Player
+from base import Player, enemy_list, enemies
 from colorama import Fore, Style
 
 print("🐉⚔️ WELCOME TO THE EXTRAORDINARY DUNGEON⚔️🐉")
@@ -15,6 +15,10 @@ print(f"""
       2. CHECK STATUS 📊 
       3. CHECK INVENTORY 🎒
       4. ENEMY INFO 👹
-      5. EXIT DUNGEON
+      5. EXIT DUNGEON 👋
 """)
 
+choose = int(input("enter the number: "))
+
+if choose == 4:
+    enemy_list(enemies)
