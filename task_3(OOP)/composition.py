@@ -5,7 +5,9 @@ class Engine:
     def __init__(self, horse_power):
         self.horse_power= horse_power
 
-
+class Wheel:
+    def __init__(self, size):
+        self.size = size
 
 class Car:
     def __init__(self, make, model, horse_power, wheel_size):
@@ -19,3 +21,5 @@ class Car:
 
 car1 = Car("Ford", "Mustang", 500, 18)
 
+print(car1.display_car())
+print(Engine.horse_power)

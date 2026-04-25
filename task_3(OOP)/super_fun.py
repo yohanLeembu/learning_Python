@@ -11,7 +11,7 @@ class Shapes:
 
 class Circle(Shapes):
     def __init__(self, color, is_filled, radius):
-        super().__init__(color, is_filled)
+        
         self.radius = radius
 
     def description(self):
@@ -41,3 +41,4 @@ print(circle.color)
 print(square.is_filled)
 print(triangle.color)
 circle.description()
+
