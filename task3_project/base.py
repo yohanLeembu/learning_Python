@@ -138,7 +138,8 @@ class Enemy(Character):
                 dropped_items.append(item)
         return dropped_items
     
-import random
+    
+
 
 # Example items
 minotaur_sword = {
@@ -185,6 +186,29 @@ goblin = Enemy(
 )
 
 goblin.items_drops = [goblin_dagger]
+
+
+enemies = [minotaur, goblin]
+def enemy_list(enemies):
+    if not enemies:
+        print("No enemies available.")
+        return
+
+    for enemy in enemies:
+        print("\n======================")
+        print(f"Enemy: {enemy.name}")
+        print(f"Level: {enemy.lvl}")
+        print(f"HP: {enemy.hp}")
+        print(f"ATK: {enemy.atk}")
+        print(f"DEF: {enemy.defense}")
+
+        print("Drops:")
+
+        if not enemy.items_drops:
+            print("  None")
+        else:
+            for item in enemy.items_drops:
+                print(f"  - {item['name']} ({int(item['chance'] * 100)}%)")
 
 
     
