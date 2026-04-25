@@ -189,6 +189,7 @@ goblin.items_drops = [goblin_dagger]
 
 
 enemies = [minotaur, goblin]
+
 def enemy_list(enemies):
     if not enemies:
         print("No enemies available.")
@@ -212,7 +213,23 @@ def enemy_list(enemies):
 
 
     
+def encounter(player, enemies):
+    valid_enemies = []
 
+    for enemy in enemies:
+        if enemy.lvl <= player.lvl:
+            valid_enemies.append(enemy)
+    
+    if not valid_enemies:
+        print("No enemies available for your level.")
+        return 
+    
+    chosen_enemy = random.choice(valid_enemies)
+
+    print(f"\nA wild {chosen_enemy.name} appeared!!")
+    print(f"Level: {chosen_enemy.lvl}")
+
+    return chosen_enemy
 
 
 
