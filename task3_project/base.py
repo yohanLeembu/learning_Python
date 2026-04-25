@@ -4,14 +4,25 @@ class Character:
         self.name = name
         self.lvl = lvl
         self.exp = exp
+        self.max_hp = hp
         self.hp = hp
         self.atk = atk
         self.defense = defense
         
     def attack(self, other):
-        damage = int(max(1, self.atk**2/(self.atk+other.defense)))
+        damage = int(max(1, self.atk**2 / (self.atk + other.defense)))
         other.hp -= damage
-        return f"{damage} dmg dealt to {other.name}"
+
+        # prevent negative HP display
+        if other.hp < 0:
+            other.hp = 0
+
+        return (
+            f"{self.name} attacks {other.name}!\n"
+            f"Level: {other.lvl}\n"
+            f"Damage dealt: {damage}\n"
+            f"{other.name} HP: {other.hp}/{other.max_hp}"
+        )
 
 class Player(Character):
     def __init__(self, name):
