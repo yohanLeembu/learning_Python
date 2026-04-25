@@ -14,8 +14,11 @@ class Character:
         return f"{damage} dmg dealt to {other.name}"
 
 class Player(Character):
-    def __init__(self, name, lvl, exp, hp, atk, defense):
-        super().__init__(name, hp, atk, defense)
+    def __init__(self, name):
+        self.name = name
+        self.hp = 100
+        self.atk = 10
+        self.defense = 10
         self.lvl = 1
         self.exp = 0
         self.equipped_items = []
