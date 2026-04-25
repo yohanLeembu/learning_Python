@@ -19,15 +19,15 @@ class Character:
 
         return (
             f"{self.name} attacks {other.name}!\n"
-            f"Level: {other.lvl}\n"
-            f"Damage dealt: {damage}\n"
-            f"{other.name} HP: {other.hp}/{other.max_hp}"
+            f"lvl: {other.lvl}\n"
+            f"{other.name} HP: {other.hp}/{other.max_hp} -{damage}"
         )
 
 class Player(Character):
     def __init__(self, name):
         self.name = name
         self.hp = 100
+        self.max_hp = self.hp
         self.atk = 10
         self.defense = 10
         self.lvl = 1
@@ -138,6 +138,7 @@ class Player(Character):
 class Enemy(Character):
     def __init__(self, name, lvl, exp, hp, atk, defense):
         super().__init__(name, lvl, exp, hp, atk, defense)
+        self.max_hp = hp
         self.items_drops = []
 
     def item_drop(self):
