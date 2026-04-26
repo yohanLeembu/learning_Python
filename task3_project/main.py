@@ -42,6 +42,9 @@ if choose == 1:
                   time.sleep(1.5)
                   print("\n",enemy_encountered.attack(name))
                   time.sleep(1.5)
+      if enemy_encountered.hp <= 0:            
+            dropped_items = enemy_encountered.item_drop()
+            name.add_item(dropped_items)
 
 
 
