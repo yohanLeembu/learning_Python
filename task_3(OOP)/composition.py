@@ -22,4 +22,3 @@ class Car:
 car1 = Car("Ford", "Mustang", 500, 18)
 
 print(car1.display_car())
-print(Engine.horse_power)

@@ -52,6 +52,3 @@ print(rectangle.height)
 
 del rectangle.width
 del rectangle.height
-print(rectangle.width)
-print(rectangle.height)
-    

@@ -22,7 +22,8 @@ class Student:
     
 
 
-
+s1 = Student("Yohan", 3.2)
+s2 = Student("Toph", 0.1)
     
 print(Student.get_count())
 print(Student.average_gpa())

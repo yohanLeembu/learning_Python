@@ -1,3 +1,7 @@
+#ineritance allows a class to inherit attributes and class from another class
+# it increases the code reusability and extensibility
+# class Child(Parent)
+
 class Animal:
     def __init__(self, name):
         self.name = name
